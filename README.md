@@ -1,6 +1,8 @@
 # Flask_vision
 
-Served MASK_RCNN, YOLO, KEYPOINY_RCNN in Flask
+To see how this project works watch this : https://youtu.be/rLS70BZgzYU
+
+Served MASK_RCNN, YOLO, KEYPOINY_RCNN models in Flask
 
 for YOLO, followed this tutorial (uses opencv) : https://opencv-tutorial.readthedocs.io/en/latest/yolo/yolo.html
 
