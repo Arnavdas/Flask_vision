@@ -1,0 +1,38 @@
+<!doctype html>
+<head>
+		<meta http-equiv="expires" content="1">
+	</head>
+{% if filename %}
+	<div>
+
+		<h4>objects detected : {{ obj }}<h4>
+		<h4>confidence scores of above instances : {{ cnf }}<h4>
+		<h4>current conf score: {{ conf_now }}<h4>
+		<p>ps : sumtimes u will need to refresh this page to get the correct new image after submitting new confidence score<p>
+		<img src="{{ url_for('mask_rcnn_display', filename=filename) }}">
+		<form method="POST" action="/pic_post_mask_rcnn" >
+    <dl>
+		<p>
+			want a diff min Conf score : <input type="number" oninvalid="alert('Must contain any number between 1-99');" name="new_cf" max="99" autocomplete="on">
+		</p>
+    </dl>
+    <p>
+		<input type="submit" value="Submit">
+	</p>
+</form>
+	</div>
+	<h3>want a new pic to try on mask_rcnn :<h3>
+	<form method="POST" action="/pic_post_mask_rcnn" enctype="multipart/form-data">
+    <dl>
+		<p>
+			upload pic here :<input type="file" name="file" autocomplete="off" >
+		</p>
+    </dl>
+    <p>
+		<input type="submit" value="Submit">
+	</p>
+</form>
+	</div>
+	<button onclick="location.href='/'" type="button" style="background-color:red;color:blue;width:150px; height:40px;">
+         Go to index page ?</button>
+{% endif %}
