@@ -10,4 +10,4 @@ for MASK_RCNN & KEYPOINT_RCNN, followed this tutorial (uses detectron2) : https:
 
 for the 2 RCNNs above you will need GPU, but also you can do it via cpu(i did that way), install cpu specific packages here : https://detectron2.readthedocs.io/en/latest/tutorials/install.html 
 
-for flask I refered many resources but particularly these were helpfull : 
+for flask I refered many resources but particularly these were helpfull : https://roytuts.com/upload-and-display-image-using-python-flask/ , https://www.javatpoint.com/flask-tutorial, 
